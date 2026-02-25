@@ -66,13 +66,13 @@ async function openaiWebSearch(query, apiKey) {
   }
 
   try {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
+        apiKey,
         model: 'gpt-4o-mini-search-preview',
         messages: [
           { role: 'user', content: query },

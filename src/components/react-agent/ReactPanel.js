@@ -54,7 +54,7 @@ function classifyContent(text) {
   return segments;
 }
 
-export default function ReactPanel({ result, progress }) {
+export default function ReactPanel({ result, progress = [] }) {
   const steps = result ? result.trajectory : progress;
   const isRunning = !result && progress.length > 0;
 

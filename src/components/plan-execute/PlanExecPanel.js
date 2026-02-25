@@ -18,7 +18,7 @@ import { FRAMEWORKS } from '../../utils/constants';
 
 const META = FRAMEWORKS.find((f) => f.id === 'plan-execute');
 
-export default function PlanExecPanel({ result, progress }) {
+export default function PlanExecPanel({ result, progress = [] }) {
   const planEvent = progress.find((p) => p.phase === 'plan');
   const execEvents = progress.filter((p) => p.phase === 'execute-done');
   const replanEvents = progress.filter((p) => p.phase === 'replan');

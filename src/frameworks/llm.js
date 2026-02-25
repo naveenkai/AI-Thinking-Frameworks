@@ -63,13 +63,13 @@ export async function callLLM(messages, { apiKey, model = 'gpt-4o-mini', tempera
 
     let response;
     try {
-      response = await fetch('https://api.openai.com/v1/chat/completions', {
+      response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
+          apiKey,
           model,
           messages,
           temperature,

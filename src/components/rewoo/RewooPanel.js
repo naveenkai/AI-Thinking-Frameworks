@@ -17,7 +17,7 @@ import { FRAMEWORKS } from '../../utils/constants';
 
 const META = FRAMEWORKS.find((f) => f.id === 'rewoo');
 
-export default function RewooPanel({ result, progress }) {
+export default function RewooPanel({ result, progress = [] }) {
   const planData = progress.find((p) => p.phase === 'plan')?.data
     || (result ? { steps: result.steps, planText: result.planText } : null);
   const evidenceItems = progress.filter((p) => p.phase === 'evidence').map((p) => p.data);

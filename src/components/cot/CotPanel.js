@@ -16,7 +16,7 @@ import { FRAMEWORKS } from '../../utils/constants';
 
 const META = FRAMEWORKS.find((f) => f.id === 'cot');
 
-export default function CotPanel({ result, progress }) {
+export default function CotPanel({ result, progress = [] }) {
   const [expandedPath, setExpandedPath] = useState(null);
 
   const isRunning = !result && progress.length > 0;
