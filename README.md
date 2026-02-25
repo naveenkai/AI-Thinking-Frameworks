@@ -23,7 +23,7 @@ Compare how different reasoning frameworks (Chain-of-Thought, ReAct, ReWOO, Plan
 1. Clone the repo and install dependencies:
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/naveenkai/AI-Thinking-Frameworks
    cd thinking-frameworks
    npm install
    ```
