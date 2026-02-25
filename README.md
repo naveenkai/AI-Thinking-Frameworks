@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# AI Thinking Frameworks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Compare how different reasoning frameworks (Chain-of-Thought, ReAct, ReWOO, Plan-Execute) answer the same question side by side. Pick a question, choose one or more frameworks, and run them with your own API key to see reasoning traces and final answers in one place.
 
-## Available Scripts
+## What it does
 
-In the project directory, you can run:
+- **Single question, multiple frameworks** — Enter one question and run it through CoT, ReAct, ReWOO, and/or Plan-Execute with the same model and settings.
+- **Live reasoning** — Each panel streams the model’s reasoning (and tool use for ReAct/Plan-Execute) as it runs.
+- **Comparison** — After a run, compare answers and (optionally) token usage and cost across the frameworks you selected.
+- **History** — Recent runs are stored locally so you can revisit them without re-running.
 
-### `npm start`
+## Frameworks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Framework | Description |
+|-----------|-------------|
+| **CoT** (Chain-of-Thought) | Step-by-step reasoning; the model explains its thinking before answering. |
+| **ReAct** | Interleaves reasoning and actions (e.g. tool calls); can use search, calculators, etc. |
+| **ReWOO** | Plans a full decomposition first, then executes steps without interleaving observations. |
+| **Plan-Execute** | Plans high-level steps, executes them, and can replan if needed. |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+1. Clone the repo and install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone <repo-url>
+   cd thinking-frameworks
+   npm install
+   ```
 
-### `npm run build`
+2. Start the app:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Open [http://localhost:3000](http://localhost:3000), open **Settings**, and add your OpenAI API key. Choose model, number of samples, and whether to show cost estimates.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Enter a question in the question bar (or pick one of the suggested examples).
+2. Select which frameworks to run (one or more).
+3. Click **Run** — each selected framework runs in its own panel and streams output.
+4. When done, use the comparison view to see answers and (if enabled) token/cost breakdown.
+5. Use the history panel to open a previous run.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Your API key is kept in session storage; framework selection is stored in localStorage.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start` — Development server at [http://localhost:3000](http://localhost:3000)
+- `npm run build` — Production build in `build/`
+- `npm test` — Run tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech
 
-## Learn More
+- React 19, Create React App
+- OpenAI-compatible API (model and API key in settings)
+- Markdown rendering for reasoning and answers (remark-gfm)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Private. Use and modify as you like within your own setup.
