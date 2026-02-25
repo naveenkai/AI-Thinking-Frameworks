@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#0a0f0f"/>
+  <!-- Central brain node -->
+  <circle cx="50" cy="50" r="12" fill="#20808D"/>
+  <!-- Branching paths -->
+  <line x1="50" y1="50" x2="22" y2="22" stroke="#20808D" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="50" y1="50" x2="80" y2="24" stroke="#20808D" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="50" y1="50" x2="24" y2="78" stroke="#20808D" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="50" y1="50" x2="78" y2="76" stroke="#20808D" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <!-- Satellite nodes (4 frameworks) -->
+  <circle cx="22" cy="22" r="9" fill="#5ba8c8"/>
+  <circle cx="80" cy="24" r="9" fill="#c9a256"/>
+  <circle cx="24" cy="78" r="9" fill="#6aad6e"/>
+  <circle cx="78" cy="76" r="9" fill="#8ab88c"/>
+</svg>

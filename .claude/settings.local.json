@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:react-lm.github.io)",
+      "WebFetch(domain:www.promptingguide.ai)",
+      "WebFetch(domain:til.simonwillison.net)",
+      "WebFetch(domain:research.google)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:tadeodonegana.com)",
+      "WebFetch(domain:peterroelants.github.io)",
+      "WebFetch(domain:www.dailydoseofds.com)",
+      "WebFetch(domain:learnprompting.org)",
+      "WebFetch(domain:langchain-opentutorial.gitbook.io)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(dir:*)",
+      "Bash(npx react-scripts build)",
+      "WebFetch(domain:ar5iv.labs.arxiv.org)",
+      "WebFetch(domain:api.duckduckgo.com)",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:docs.tavily.com)",
+      "WebFetch(domain:selfrag.github.io)",
+      "Bash(npm run build:*)",
+      "Bash(npx depcheck:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:cobusgreyling.medium.com)",
+      "WebFetch(domain:medium.com)",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm:*)"
+    ]
+  }
+}
