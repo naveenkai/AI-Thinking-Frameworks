@@ -20,7 +20,7 @@ export default function CotPanel({ result, progress = [] }) {
   const [expandedPath, setExpandedPath] = useState(null);
 
   const isRunning = !result && progress.length > 0;
-  const pathCount = result ? result.paths.length : progress.length;
+  const pathCount = result ? (result.paths?.length || 0) : progress.length;
   const isOpenEnded = result?.questionType === 'open-ended';
 
   const stats = result ? [
@@ -46,7 +46,7 @@ export default function CotPanel({ result, progress = [] }) {
           {isOpenEnded && <span className="paths-header-mode"> · open-ended → synthesized</span>}
           {result?.questionType === 'factual' && <span className="paths-header-mode"> · factual → majority vote</span>}
         </div>
-        {(result ? result.paths : progress.map((p) => p.content)).map((path, i) => (
+        {(result ? (result.paths || []) : progress.map((p) => p.content)).map((path, i) => (
           <div key={i} className="cot-path-item" onClick={() => setExpandedPath(expandedPath === i ? null : i)}>
             <div className="path-label">
               Path {i + 1}
