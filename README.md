@@ -1,4 +1,4 @@
-# AI Thinking Frameworks
+# Agent Thinking Frameworks
 
 Compare how different reasoning frameworks (Chain-of-Thought, ReAct, ReWOO, Plan-Execute) answer the same question side by side. Pick a question, choose one or more frameworks, and run them with your own API key to see reasoning traces and final answers in one place.
 
@@ -23,7 +23,7 @@ Compare how different reasoning frameworks (Chain-of-Thought, ReAct, ReWOO, Plan
 1. Clone the repo and install dependencies:
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/naveenkai/Agent-Thinking-Frameworks
    cd thinking-frameworks
    npm install
    ```
